@@ -1,0 +1,15 @@
+baseURL: 'https://blog.mwmbl.org/'
+languageCode: 'en-us'
+title: 'blog.mwmbl'
+theme: "mwmbl"
+
+params:
+    disableThemeToggle: true
+    defaultTheme: light
+    hideFooter: true
+    disableScrollToTop: true
+    ShowShareButtons: true
+    label:
+        text: "mwmbl"
+        icon: icon.png
+        iconHeight: 32
