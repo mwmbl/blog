@@ -13,8 +13,8 @@ languages:
           series: series
         menu:
             main:
-                - name: mwmbl.org
-                  url: https://mwmbl.org
+                - name: Blog
+                  url: /
                   weight: 1
                 - name: Archive
                   url: archives
