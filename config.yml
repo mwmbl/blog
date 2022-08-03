@@ -19,10 +19,15 @@ languages:
                 - name: Archive
                   url: archives
                   weight: 5
-                - name: Source code
+                - name: Contribute
                   url: https://github.com/mwmbl
-                - name: Twitter
-                  url: https://twitter.com/mwmblorg
+                  weight: 200
+                - name: Discuss
+                  url: https://matrix.to/#/#mwmbl:matrix.org
+                  weight: 100
+                - name: Donate
+                  url: https://opencollective.com/mwmbl
+                  weight: 1000
 
 params:
     description: "The people's web search engine"
