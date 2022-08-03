@@ -1,6 +1,7 @@
 baseURL: 'https://blog.mwmbl.org/'
 languageCode: 'en-us'
-title: 'blog.mwmbl'
+title: 'mwmbl blog'
+description: "The people's web search engine"
 theme: "mwmbl"
 
 languages:
