@@ -3,8 +3,31 @@ languageCode: 'en-us'
 title: 'blog.mwmbl'
 theme: "mwmbl"
 
+languages:
+    en:
+        languageName: "English"
+        weight: 1
+        taxonomies:
+          category: categories
+          tag: tags
+          series: series
+        menu:
+            main:
+                - name: mwmbl.org
+                  url: https://mwmbl.org
+                  weight: 1
+                - name: Archive
+                  url: archives
+                  weight: 5
+                - name: Source code
+                  url: https://github.com/mwmbl
+                - name: Twitter
+                  url: https://twitter.com/mwmblorg
+
 params:
+    description: "The people's web search engine"
     disableThemeToggle: true
+    ShowBreadCrumbs: true
     defaultTheme: light
     hideFooter: true
     disableScrollToTop: true
