@@ -5,9 +5,11 @@ author: ["John Marcellus"]
 ---
 
 The mumble team took a bit of a great since August to work on some other areas of life, but we have been quietly planning the last several months around a couple of areas:
- - **Server-side web crawling**
-    - We know that client-side web crawling is important, but the recent security implications with Chrome security will make it more challenging to use the client-side crawler.
-    - We are working on a YouTube channel to share some of the technology ideas that we have as a team to make an impact on free search
+ - **Editing search results**
+    - The most requested feature is to be able to suggest sites to crawl. We're planning to go one better and let users edit the whole search results ranking _and_ add their own search results.
+
+ - **Promotion**
+    -  We are working on a YouTube channel to share some of the technology ideas that we have as a team to make an impact on free search
 
  - **Funding**
     - We have been focused on researching open funding through grants along with trying to make sure we have the right structure/ideas around this area so we would not later impact the non-profit we plan on standing up.
