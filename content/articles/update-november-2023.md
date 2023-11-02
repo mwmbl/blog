@@ -235,7 +235,7 @@ probably a good time to re-evaluate the ranking algorithm.
 
 Mwmbl is pronounced "mumble", and no, it's not English, it's Welsh
 ([kind of](https://en.wikipedia.org/wiki/Mumbles)). And no, we're not
-going to change the name because [you don't like it](https://news.ycombinator.com/item?id=37564611) or can't remember
+going to change the name because [you don’t like it](https://news.ycombinator.com/item?id=37564611) or can't remember
 how to spell it.
 
 As for being a marketing failure, you clearly don't understand the
