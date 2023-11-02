@@ -159,9 +159,7 @@ our index to satisfy users' queries. That is why we focused on
 building tools for the community to help us crawl the web, rather than
 improving our ranking algorithm, for example.
 
-In order to achieve the Googlarity, we think we need around (100
-billion
-pages)[https://www.kevin-indig.com/googles-index-is-smaller-than-we-think-and-might-not-grow-at-all/]
+In order to achieve the Googlarity, we think we need around (100 billion pages)[https://www.kevin-indig.com/googles-index-is-smaller-than-we-think-and-might-not-grow-at-all/]
 in our index, perhaps less. We are currently at around 100 million, so
 only three orders of magnitude off!
 
@@ -203,18 +201,15 @@ meaning we can store more URLs overall.
 ## Search quality
 
 It's reassuring that the queries mentioned in the top comment on that
-(first Hacker News
-post)[https://news.ycombinator.com/item?id=29690877] at least _look_ a
+(first Hacker News post)[https://news.ycombinator.com/item?id=29690877] at least _look_ a
 lot better: (best car brands)[https://mwmbl.org/?q=best+car+brands],
-(what is a test?)[https://mwmbl.org/?q=What+is+a+test%3F] and (duck
-duck go)[https://mwmbl.org/?q=Duck+Duck+Go] all look hugely improved.
+(what is a test?)[https://mwmbl.org/?q=What+is+a+test%3F] and (duck duck go)[https://mwmbl.org/?q=Duck+Duck+Go]
+all look hugely improved.
 
-Actual (evaluation
-results)[https://docs.google.com/spreadsheets/d/1iJoQ0y0wD7_E8bEgS5Gv8VZCK8C9cfN5epkDwxypSlA/edit?usp=sharing]
+Actual (evaluation results)[https://docs.google.com/spreadsheets/d/1iJoQ0y0wD7_E8bEgS5Gv8VZCK8C9cfN5epkDwxypSlA/edit?usp=sharing]
 tell a different story however - it seems things have gotten slightly
 worse in the last year. This lends credence to my son's claim that the
-results have never been the same since I accidentally (deleted the
-index)[https://www.youtube.com/watch?v=wdXC3PAJRD0]...
+results have never been the same since I accidentally (deleted the index)[https://www.youtube.com/watch?v=wdXC3PAJRD0]...
 
 Anyway, given that the size of our index is now a lot bigger, it's
 probably a good time to re-evaluate the ranking algorithm.
@@ -238,8 +233,7 @@ probably a good time to re-evaluate the ranking algorithm.
 
 Mwmbl is pronounced "mumble", and no, it's not English, it's Welsh
 ((kind of)[https://en.wikipedia.org/wiki/Mumbles]). And no, we're not
-going to change the name because (you don't like
-it)[https://news.ycombinator.com/item?id=37564611] or can't remember
+going to change the name because (you don't like it)[https://news.ycombinator.com/item?id=37564611] or can't remember
 how to spell it.
 
 As for being a marketing failure, you clearly don't understand the
