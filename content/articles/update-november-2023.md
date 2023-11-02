@@ -29,17 +29,17 @@ should necessarily exist.
 
 Some of the breaks were for good reasons, like having a fourth child,
 Layla, who is now six weeks old. Some of them were for spurious (but I
-would still argue, good) reasons, like (inventing a sudoku-pentominous
+would still argue, good) reasons, like [inventing a sudoku-pentominous
 puzzle
-hybrid)[https://logic-masters.de/Raetselportal/Raetsel/zeigen.php?id=000F6A].
+hybrid](https://logic-masters.de/Raetselportal/Raetsel/zeigen.php?id=000F6A).
 But I have come back to Mwmbl, and I'm still having a great
 time. There is also still much more to do...
 
 
 # Background
 
-I launched Mwmbl on Boxing Day 2021 with a (Hacker News
-post)[https://news.ycombinator.com/item?id=29690877]. At the time
+I launched Mwmbl on Boxing Day 2021 with a [Hacker News
+post](https://news.ycombinator.com/item?id=29690877). At the time
 Mwmbl was little more than a proof of concept with a few hundred
 thousand pages indexed. But the response, while not overwhelmingly
 positive, was significant enough to keep me working on the project.
@@ -59,9 +59,9 @@ or [python script](https://github.com/mwmbl/crawler-script).
 The best thing about this project has been the support we have
 received from the community. Mwmbl runs entirely on a donated
 server. Other generous donors have
-(given)[https://opencollective.com/mwmbl] over $800 to support the
-project. Over ten people have contributed to the (source
-code)[https://github.com/mwmbl]. And tens of our amazing volunteers
+[given](https://opencollective.com/mwmbl) over $800 to support the
+project. Over ten people have contributed to the [source
+code](https://github.com/mwmbl). And tens of our amazing volunteers
 are crawling web, donating their compute and bandwidth. Without them,
 we would have no search results.
 
@@ -76,8 +76,8 @@ plenty of other new things, but here are some highlights.
 
 ## Launch of the stats page
 
-A few weeks ago we launched a (real-time stats
-page)[https://mwmbl.org/stats/]. On an average day, around 60
+A few weeks ago we launched a [real-time stats
+page](https://mwmbl.org/stats/). On an average day, around 60
 volunteers are helping us crawl the web, and we're crawling around a
 million pages a day. We now have visibility on which domains we're
 crawling most frequently, and ensuring these domains are
@@ -87,8 +87,8 @@ priority.
 ## Switch to Django
 
 If you'd told me I'd be using Django on this project when I started
-I'd probably have metaphorically slapped you. The (grug brained
-developer)[https://grugbrain.dev/] in me would have said "Complexity
+I'd probably have metaphorically slapped you. The [grug brained
+developer](https://grugbrain.dev/) in me would have said "Complexity
 bad! Django very complex. Mean Django very bad", and largely I would
 still agree with that. But having seen Django used at work to build
 some very cool things very quickly, I have been convinced that
@@ -102,7 +102,7 @@ term goals.
 
 So far, just the API on the main site is using Django (together with
 the excellent Django Ninja), but we are slowly experimenting with
-moving the front end to it, with (htmx)[https://htmx.org/] for AJAXy
+moving the front end to it, with [htmx](https://htmx.org/) for AJAXy
 stuff.
 
 ## Launch of Mwmbl Beta
@@ -113,13 +113,13 @@ search results. The vision is that this will ultimately be like a kind
 of Wikipedia or Stack Overflow for search. Not every results page will
 be manually curated, but the curated ones will give us insight and
 statistics that will be used to automatically rank pages for other
-results page, and yes, provide a dataset for (learning to
-rank)[https://en.wikipedia.org/wiki/Learning_to_rank].
+results page, and yes, provide a dataset for [learning to
+rank](https://en.wikipedia.org/wiki/Learning_to_rank).
 
 I announced this idea a long time ago, and began working on it. After
 falling into a few holes along the way, stopping for one of my
 hiatuses and restarting again, I am finally happy to announce the
-launch of (Mwmbl Beta)[https://beta.mwmbl.org]. It's not more than an
+launch of [Mwmbl Beta](https://beta.mwmbl.org). It's not more than an
 early prototype and the front end is horrible because I built it
 myself. But the key things are there - you can rerank search results,
 and add and delete new ones. Give it a try - just beware, this is an
@@ -159,7 +159,9 @@ our index to satisfy users' queries. That is why we focused on
 building tools for the community to help us crawl the web, rather than
 improving our ranking algorithm, for example.
 
-In order to achieve the Googlarity, we think we need around (100 billion pages)[https://www.kevin-indig.com/googles-index-is-smaller-than-we-think-and-might-not-grow-at-all/]
+In order to achieve the Googlarity, we think we need around [100
+billion
+pages](https://www.kevin-indig.com/googles-index-is-smaller-than-we-think-and-might-not-grow-at-all/)
 in our index, perhaps less. We are currently at around 100 million, so
 only three orders of magnitude off!
 
@@ -184,7 +186,7 @@ count of the number of URLs without running out of memory.
 As we were scanning the index I collected some other stats:
  - We have a total of 343036391 (non-unique) URLs in the index. This
    means that each URL is indexed around 3.3 times on average.
- - Each (page)[https://book.mwmbl.org/page/architecture/#index-layout]
+ - Each [page](https://book.mwmbl.org/page/architecture/#index-layout)
    has on average 33.5 items
 
 This is reassuring since it means that the hypothesis that Mwmbl is
@@ -201,15 +203,15 @@ meaning we can store more URLs overall.
 ## Search quality
 
 It's reassuring that the queries mentioned in the top comment on that
-(first Hacker News post)[https://news.ycombinator.com/item?id=29690877] at least _look_ a
-lot better: (best car brands)[https://mwmbl.org/?q=best+car+brands],
-(what is a test?)[https://mwmbl.org/?q=What+is+a+test%3F] and (duck duck go)[https://mwmbl.org/?q=Duck+Duck+Go]
+[first Hacker News post](https://news.ycombinator.com/item?id=29690877) at least _look_ a
+lot better: [best car brands](https://mwmbl.org/?q=best+car+brands),
+[what is a test?](https://mwmbl.org/?q=What+is+a+test%3F) and [duck duck go](https://mwmbl.org/?q=Duck+Duck+Go)
 all look hugely improved.
 
-Actual (evaluation results)[https://docs.google.com/spreadsheets/d/1iJoQ0y0wD7_E8bEgS5Gv8VZCK8C9cfN5epkDwxypSlA/edit?usp=sharing]
+Actual [evaluation results](https://docs.google.com/spreadsheets/d/1iJoQ0y0wD7_E8bEgS5Gv8VZCK8C9cfN5epkDwxypSlA/edit?usp=sharing)
 tell a different story however - it seems things have gotten slightly
 worse in the last year. This lends credence to my son's claim that the
-results have never been the same since I accidentally (deleted the index)[https://www.youtube.com/watch?v=wdXC3PAJRD0]...
+results have never been the same since I accidentally [deleted the index](https://www.youtube.com/watch?v=wdXC3PAJRD0)...
 
 Anyway, given that the size of our index is now a lot bigger, it's
 probably a good time to re-evaluate the ranking algorithm.
@@ -232,8 +234,8 @@ probably a good time to re-evaluate the ranking algorithm.
 # What's in a name? or - a rant
 
 Mwmbl is pronounced "mumble", and no, it's not English, it's Welsh
-((kind of)[https://en.wikipedia.org/wiki/Mumbles]). And no, we're not
-going to change the name because (you don't like it)[https://news.ycombinator.com/item?id=37564611] or can't remember
+([kind of](https://en.wikipedia.org/wiki/Mumbles)). And no, we're not
+going to change the name because [you don't like it](https://news.ycombinator.com/item?id=37564611) or can't remember
 how to spell it.
 
 As for being a marketing failure, you clearly don't understand the
