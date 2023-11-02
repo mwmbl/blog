@@ -4,7 +4,7 @@ date: "2022-11-07"
 author: ["John Marcellus"]
 ---
 
-The mumble team took a bit of a great since August to work on some other areas of life, but we have been quietly planning the last several months around a couple of areas:
+The Mwmble team took a bit of a great since August to work on some other areas of life, but we have been quietly planning the last several months around a couple of areas:
  - **Editing search results**
     - The most requested feature is to be able to suggest sites to crawl. We're planning to go one better and let users edit the whole search results ranking _and_ add their own search results.
 
