@@ -62,7 +62,7 @@ server. Other generous donors have
 [given](https://opencollective.com/mwmbl) over $800 to support the
 project. Over ten people have contributed to the [source
 code](https://github.com/mwmbl). And tens of our amazing volunteers
-are crawling web, donating their compute and bandwidth. Without them,
+are crawling the web, donating their compute and bandwidth. Without them,
 we would have no search results.
 
 So firstly I want to thank all of you that have contributed in any way
