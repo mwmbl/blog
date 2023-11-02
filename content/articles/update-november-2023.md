@@ -1,5 +1,5 @@
 ---
-title: "November 2023 Update"
+title: "Mwmbl Update - Over 100 million pages indexed"
 date: "2023-11-01"
 author: ["Daoud Clarke"]
 ---
