@@ -5,7 +5,7 @@ author: ["Daoud Clarke"]
 ---
 
 
-We recently launched the new version of [https://mwmbl.org](Mwmbl)
+We recently launched the new version of [Mwmbl](https://mwmbl.org)
 which includes the long-awaited feature of allowing users to curate
 search results. This is an experiment, since we don't know:
 
