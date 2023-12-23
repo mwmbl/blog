@@ -31,7 +31,7 @@ building our own as [Marginalia Search](https://search.marginalia.nu/)
 does. We think we will eventually need to index 100 billion pages in
 order to meet our [search quality goals](https://book.mwmbl.org/page/roadmap/).
 
-##' Other crawling improvements planned for 2024
+### Other crawling improvements planned for 2024
 
  - Fix [Search queue does not have enough URLs from top domains](https://github.com/mwmbl/mwmbl/issues/140)
  - Fix [SEO spam showing up in crawler](https://github.com/mwmbl/mwmbl/issues/141)
