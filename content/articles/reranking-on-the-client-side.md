@@ -104,5 +104,5 @@ cloud storage. If we are ever going to serve millions of users on our
 shoe-string budget, then this is how we will have to do it.
 
 If you would like to get involved, join us on our
-[https://matrix.to/#/#mwmbl:matrix.org](Matrix server), or send a pull
+[Matrix server](https://matrix.to/#/#mwmbl:matrix.org), or send a pull
 request to fix my rubbish Rust code. Thank you for reading!
