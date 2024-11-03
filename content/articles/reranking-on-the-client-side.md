@@ -95,7 +95,7 @@ I am a beginner in Rust, and doing too hard things at the same time -
 building a search engine and learning Rust - seemed like a recipe for
 disaster. But I can build small bits in Rust, especially if I have
 already built them in Python. So over the last few days, I've [rebuilt
-our heuristic ranking in Rust](https://github.com/mwmbl/rankeval/).
+our heuristic ranking in Rust](https://github.com/mwmbl/ranker/).
 The rust compiles to web assembly which will eventually be called from
 our [excellent new front end](https://alpha.mwmbl.org/). The WASM file
 is currently 1.3M with optimizations turned on, which is larger than
