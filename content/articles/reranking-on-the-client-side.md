@@ -97,11 +97,19 @@ disaster. But I can build small bits in Rust, especially if I have
 already built them in Python. So over the last few days, I've [rebuilt
 our heuristic ranking in Rust](https://github.com/mwmbl/rankeval/).
 The rust compiles to web assembly which will eventually be called from
-our [excellent new front end](https://alpha.mwmbl.org/). Now all the
-back end needs to do is pull out pre-ranked results for each unigram
-and bigram. These can be easily cached, and potentially even kept in
-cloud storage. If we are ever going to serve millions of users on our
-shoe-string budget, then this is how we will have to do it.
+our [excellent new front end](https://alpha.mwmbl.org/). The WASM file
+is currently 1.3M with optimizations turned on, which is larger than
+I'd like. Gzipped it is 491K which doesn't seem too bad. And the
+client only needs to load it once, until we change our ranking
+algorithm.
+
+It is likely that we will still need to do some ranking on the server
+side, for low-powered devices, and possibly API clients. But with
+client-side ranking, all the back end needs to do is pull out
+pre-ranked results for each unigram and bigram. These can be easily
+cached, and potentially even kept in cloud storage. If we are ever
+going to serve millions of users on our shoe-string budget, then this
+is how we will have to do it.
 
 If you would like to get involved, join us on our
 [Matrix server](https://matrix.to/#/#mwmbl:matrix.org), or send a pull
