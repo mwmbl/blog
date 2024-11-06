@@ -1,5 +1,5 @@
 ---
-title: "Re-ranking search results on the client side"
+title: "Re-ranking search results on the client side in Rust"
 date: "2024-11-03"
 author: ["Daoud Clarke"]
 ---
