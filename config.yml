@@ -4,6 +4,11 @@ title: 'mwmbl blog'
 description: "The people's web search engine"
 theme: "mwmbl"
 
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
 languages:
     en:
         languageName: "English"
