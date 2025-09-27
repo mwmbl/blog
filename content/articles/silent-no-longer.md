@@ -4,7 +4,7 @@ date: "2025-09-27"
 author: ["Daoud Clarke"]
 ---
 
-_Originally posted on [my personal blog](https://daoudclarke.net/2025/08/02/silent-no-longer) on 2nd August 2025_
+_This article was originally posted on [my personal blog](https://daoudclarke.net/2025/08/02/silent-no-longer) on 2nd August 2025._
 
 Dear friends,
 
