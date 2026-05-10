@@ -8,6 +8,8 @@ _This article was originally posted on [theoteno's Inkwell blog](https://inkwell
 
 Where do I even start? Oh, of course with the long Discord/Amazon outage on a night 2 days ago… but unlike 1-2 weeks ago, I planned to watch anime with a new friend. (we met on a local anime Discord, I needed it for my local "Crunchyroll" registration) I needed a backup plan for later. Luckily, I was already a user of the Matrix chat protocol with Discord alternative clients, after being betrayed by Stoat(Revolt). Unless there's a Flatpak for Stoat, I don't think I can use it in Game mode on my Steam Deck.
 
+![mwmbl embedded as a widget in Element on Steam Deck](/images/theoteno-matrix-mwmbl.jpg)
+
 Let's skip Commet(Chat): Yes, it's great: I love the GIF picker, but it is really not great in a GameMode/Gamescope session.
 
 Now, this is where the fun begins!
