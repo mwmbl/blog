@@ -23,7 +23,7 @@ I had 3 other Matrix apps:
 
 Element is reliable, for real: just added the host/home permission with Flatseal and it worked.
 
-But it doesn't have a GIF picker, just some stickers and what you have downloaded to upload… I was testing voice call, screenshare on my test server, and later rediscovered the Extensions …and → the Custom Widget!
+But it doesn't have a GIF picker, just some stickers and what you have downloaded to upload… I was testing voice call, screenshare on my test (that’s the name…!) server, and later rediscovered the Extensions …and → the Custom Widget!
 
 I tried to add the GIF websites (Giphy, Klipy) to add to the sidebar, without any success. The GIF keyboards might be popular, but where are these on Steam Deck game session?
 
