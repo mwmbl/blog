@@ -7,6 +7,8 @@ author: ["Liam Prosser"]
 Mwmbl is introducing membership, an important step toward supporting
 the continued development of its open-source search engine.
 
+Try it here: https://mwmbl.org/membership
+
 Membership offers a way for people who believe in independent search
 to support the project and contribute to its future.
 
