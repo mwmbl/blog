@@ -7,6 +7,18 @@
     margin: var(--gap) 0 calc(var(--gap) * 2) 0;
 }
 
+.first-entry:not(.home-info) {
+    padding: var(--gap);
+    background: #eef4ff;
+    border: 1px solid #c5d6fa;
+    border-radius: var(--radius);
+}
+
+.dark .first-entry:not(.home-info) {
+    background: #263247;
+    border-color: #49628b;
+}
+
 .first-entry .entry-header {
     overflow: hidden;
     display: -webkit-box;
@@ -14,7 +26,8 @@
     -webkit-line-clamp: 3;
 }
 
-.first-entry .entry-header h1 {
+.first-entry .entry-header h1,
+.first-entry .entry-header h2 {
     font-size: 34px;
     line-height: 1.3;
 }

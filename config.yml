@@ -37,9 +37,9 @@ languages:
 
 params:
     description: "The people's web search engine"
-    disableThemeToggle: true
+    disableThemeToggle: false
     ShowBreadCrumbs: true
-    defaultTheme: light
+    defaultTheme: auto
     hideFooter: true
     disableScrollToTop: true
     ShowShareButtons: true
