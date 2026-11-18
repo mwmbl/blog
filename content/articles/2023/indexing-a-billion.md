@@ -1,6 +1,7 @@
 ---
 title: "Indexing a billion pages"
 date: "2023-12-23"
+aliases: ["/articles/indexing-a-billion/"]
 author: ["Daoud Clarke"]
 ---
 

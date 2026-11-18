@@ -1,6 +1,7 @@
 ---
 title: "Re-ranking search results on the client side in Rust"
 date: "2024-11-03"
+aliases: ["/articles/reranking-on-the-client-side/"]
 author: ["Daoud Clarke"]
 ---
 

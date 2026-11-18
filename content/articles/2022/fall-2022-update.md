@@ -1,6 +1,7 @@
 ---
 title: "Fall 2022 Update"
 date: "2022-11-07"
+aliases: ["/articles/fall-2022-update/"]
 author: ["John Marcellus"]
 ---
 

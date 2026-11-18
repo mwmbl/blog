@@ -1,6 +1,7 @@
 ---
 title: "Update July 2025"
 date: "2025-07-21"
+aliases: ["/articles/update-july-2025/"]
 author: ["Daoud Clarke"]
 ---
 

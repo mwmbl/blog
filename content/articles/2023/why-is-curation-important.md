@@ -1,6 +1,7 @@
 ---
 title: "Why is curation of web search results important?"
 date: "2023-11-30"
+aliases: ["/articles/why-is-curation-important/"]
 author: ["Daoud Clarke"]
 ---
 
