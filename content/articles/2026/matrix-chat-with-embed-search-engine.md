@@ -1,6 +1,7 @@
 ---
 title: "Matrix chat with Embed Search Engine"
 date: "2026-05-10"
+aliases: ["/articles/matrix-chat-with-embed-search-engine/"]
 author: ["theoteno"]
 ---
 

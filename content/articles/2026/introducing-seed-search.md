@@ -1,6 +1,7 @@
 ---
 title: "Introducing Seed Search"
 date: "2026-10-22"
+aliases: ["/articles/introducing-seed-search/"]
 author: ["Liam Prosser"]
 ---
 

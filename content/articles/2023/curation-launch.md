@@ -1,6 +1,7 @@
 ---
 title: "We are entering a new era of web search"
 date: "2023-11-29"
+aliases: ["/articles/curation-launch/"]
 author: ["Daoud Clarke"]
 ---
 

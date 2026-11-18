@@ -1,6 +1,7 @@
 ---
 title: "Tracking user IDs in the crawler"
 date: "2026-05-22"
+aliases: ["/articles/crawler-user-ids/"]
 author: ["Daoud Clarke"]
 ---
 

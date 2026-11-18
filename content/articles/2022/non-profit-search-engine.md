@@ -1,6 +1,7 @@
 ---
 title: "Why the world needs a non-profit search engine"
 date: "2022-07-10"
+aliases: ["/articles/non-profit-search-engine/"]
 author: ["Daoud Clarke"]
 ---
 

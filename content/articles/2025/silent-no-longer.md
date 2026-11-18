@@ -1,6 +1,7 @@
 ---
 title: "Silent No Longer"
 date: "2025-09-27"
+aliases: ["/articles/silent-no-longer/"]
 author: ["Daoud Clarke"]
 ---
 

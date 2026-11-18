@@ -1,6 +1,7 @@
 ---
 title: "Optimize Your Mwmbl Crawler"
 date: "2026-11-18"
+aliases: ["/articles/optimize-your-mwmbl-crawler/"]
 author: ["Blue Heron"]
 ---
 
@@ -69,7 +70,7 @@ In this case, we can see `5x10` with a score of ~1704 and `5x25` with a score of
 
 In your case, maybe you don't *want* Mwmbl to aggressively crawl as much as it can. Maybe you need to share internet with a lot of other people, so you prefer to crawl with less results per minute. That's OK. The choice is yours; use the data to decide.
 
-Armed with these imperical results, open up your `.env` file, set `CRAWLER_WORKERS=5` and `CRAWL_THREADS=10`, restart it with `docker compose up -d` and enjoy!
+Armed with these emperical results, open up your `.env` file, set `CRAWLER_WORKERS=5` and `CRAWL_THREADS=10`, restart it with `docker compose up -d` and enjoy!
 
 ## Wait, What? Why is 5x100 Slower Than 5x10?
 
@@ -81,10 +82,10 @@ Armed with these imperical results, open up your `.env` file, set `CRAWLER_WORKE
 - Running out of memory, CPU availability, network bandiwdth, or other shared resource on your PC
 - A number of other things I can't fathom right now
 
-This is why the benchmarker uses an *imperical* methodology: it gives you the actual, real, tested results.
+This is why the benchmarker uses an *emperical* methodology: it gives you the actual, real, tested results.
 
 ## Conclusion
 
-Mwmbl's crawler exposes a couple of nerd knobs and an imperical, systematic process for optimizing how many sites it can crawl/index at once. Using the data, you can decide how far you want to take the crawler, and how much bandwidth you want to use.
+Mwmbl's crawler exposes a couple of nerd knobs and an emperical, systematic process for optimizing how many sites it can crawl/index at once. Using the data, you can decide how far you want to take the crawler, and how much bandwidth you want to use.
 
 If you have any questions, concerns, or comments, hit us up in our Matrix server (Crawling channel).

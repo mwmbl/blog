@@ -1,6 +1,7 @@
 ---
 title: "Mwmbl Introduces Membership"
 date: "2026-10-18"
+aliases: ["/articles/introducing-membership-2026/"]
 author: ["Liam Prosser"]
 ---
 
