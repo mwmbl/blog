@@ -9,33 +9,32 @@ author: ["Blue Heron"]
 
 Mwmbl uses "web crawlers" to trawl the internet and find interesting, useful, and safe sites to add to the searchable index.
 
-Unlike large search engines, Mwmbl depends on the community to help it crawl the billions of pages that make up the internet. If you're technically inclined, you can [follow the instructions here](https://book.mwmbl.org/page/community/#running-the-mwmbl-crawler-with-docker-compose) to set up your very own Mwmbl crawler to help grow the index. It only takes a few minutes to set-up and get it running.
-
+Unlike large search engines, Mwmbl depends on the community to help it crawl the billions of pages that make up the internet. If you're technically inclined, you can [follow the instructions here](https://book.mwmbl.org/page/community/#running-the-mwmbl-crawler-with-docker-compose) to set up your very own Mwmbl crawler and help grow the index. It only takes a few minutes to get it running.
 
 ## Available Nerd Knobs
 
-Now that you have the crawler up and running, you may have noticed that the docs mention two tweakable "nerd knobs": the `CRAWLER_WORKERS` and `CRAWLER_THREADS` parameters. What are these, and how do they work? In short:
+Now that you have the crawler up and running, you may have noticed that the docs mention two tweakable "nerd knobs": the `CRAWLER_WORKERS` and `CRAWL_THREADS` parameters. What are these, and how do they work? In short:
 
-- `CRAWLER_WORKERS` is how many processes (independent instances of the crawler) running
-- `CRAWLER_THREADS` is how many concurrent web-requests each of those workers can make (e.g. `10` means "try to crawl 10 websites at once")
+- `CRAWLER_WORKERS` is the number of crawler processes (independent instances of the crawler).
+- `CRAWL_THREADS` is the number of concurrent web requests each worker can make (e.g., `10` means "try to crawl 10 pages at once").
 
-For example, a configuration of 3 `CRAWLER_WORKERS` and 10 `CRAWLER_THREADS` (also known as `3x10`) would try to access up to 30 sites at once.  Which raises another question: should you use `1x30`, `3x10`, `2x15`, or something else?
+For example, a configuration of 3 `CRAWLER_WORKERS` and 10 `CRAWL_THREADS` (also known as `3x10`) would try to fetch up to 30 pages at once. Which raises another question: should you use `1x30`, `3x10`, `2x15`, or something else?
 
-The answer is "it depends" and, to be honest, I don't have a full picture of how it affects the crawler. But thankfully, you don't need to know -- we made a practical, methodical tool to help you figure it out!
+The answer is "it depends," and, to be honest, I don't have a full picture of how these settings affect the crawler. But thankfully, you don't need to know -- we made a practical, methodical tool to help you figure it out!
 
 ## Optimizing Crawler Runtime
 
-How do we evaluate how good a crawler is working? At a high-level, there's a simple metric: **how many pages are we fetching per minute?** Using this as an approximation of "more means the crawler is working better," we can try different combinations of knobs to see what works best.
+How do we evaluate how well a crawler is working? At a high level, there's a simple metric: **how many pages are we fetching per minute?** Using that as a rough measure of performance, we can try different combinations of knobs to see what works best.
 
-We provide a handy-dandy tool that does exactly this. From your `mwmbl` directory, run `./deploy/crawler/benchmark.sh` and wait for the results. (If you're on a VM, you can run this script instead: `curl -fsSL https://raw.githubusercontent.com/mwmbl/mwmbl/main/deploy/crawler/benchmark.sh | sh`)
+We provide a handy-dandy tool that does exactly this. From your `mwmbl` directory, run `./deploy/crawler/benchmark.sh` and wait for the results. (If you're on a VM, you can run this script instead: `curl -fsSL https://raw.githubusercontent.com/mwmbl/mwmbl/main/deploy/crawler/benchmark.sh | sh`.)
 
-By default, the benchmarker looks at processes from 1-5 and threads from 1-100, for a total of 20 combinations of parameters. It spits out a `benchmark-results-fetches-<date>.csv` file with the results. 
+The benchmarker tests process counts from 1 to 5 and thread counts of 10, 25, 50, and 100: up to 20 combinations of parameters. It spits out a `benchmark-results-fetches-<date>.csv` file with the results.
 
-This process takes about 30-40 minutes *per combination*, so you might want to leave it running overnight and check the results back.
+This process takes about 30-40 minutes *per combination*, so you might want to leave it running overnight and check the results later.
 
 ## Interpreting the Results
 
-The optimizer will tell you what combination was the `WINNER` (e.g. 3x10). You can also open the benchmark `.csv` file and decide for yourself what configuration you want to use.  For example, the CSV may contain something like:
+The benchmarker will tell you which combination was the `WINNER` (e.g., `3x10`). You can also open the benchmark `.csv` file and decide for yourself which configuration you want to use. For example, the CSV may contain something like:
 
 ```csv
 timestamp,processes,threads,warmup_seconds,duration_seconds,fetches_per_minute,status,error
@@ -62,30 +61,30 @@ timestamp,processes,threads,warmup_seconds,duration_seconds,fetches_per_minute,s
 2026-11-18T10:07:24+00:00,5,100,300,1800,916.3,OK,
 ```
 
-After the date and time, the colums are `CRAWLER_WORKERS`, `CRAWL_THREADS`, how long the test ran in seconds (1800 is 30 minutes), and the number of pages crawled per minute.
+After the timestamp, the columns show the number of workers and threads, the warmup and test durations in seconds, the number of fetches per minute, the status, and any error. The test duration of 1800 seconds is 30 minutes.
 
-In the example above, you can see that a configuration of `1x10` on this machine would result in ~564 fetches per minute. But a configuration of `5x100` results in ~916  fetches per minute. (More than 5x the resources, but less than double the output!)
+In the example above, one run with a configuration of `1x10` on this machine resulted in ~564 fetches per minute. A run with `5x100` resulted in ~916 fetches per minute. (That's 50 times as many threads, but less than double the output!)
 
-In this case, we can see `5x10` with a score of ~1704 and `5x25` with a score of ~1708. I would personally choose `5x10` since it's almost the same performance-wise but takes up less resources/bandwidth.
+In this case, we can see `5x10` with a score of ~1704 and `5x25` with a score of ~1708. I would personally choose `5x10` since its performance is almost the same with fewer threads.
 
-In your case, maybe you don't *want* Mwmbl to aggressively crawl as much as it can. Maybe you need to share internet with a lot of other people, so you prefer to crawl with less results per minute. That's OK. The choice is yours; use the data to decide.
+In your case, maybe you don't *want* Mwmbl to crawl as aggressively as it can. Maybe you need to share your internet connection with a lot of other people, so you prefer fewer fetches per minute. That's OK. The choice is yours; use the data to decide.
 
-Armed with these emperical results, open up your `.env` file, set `CRAWLER_WORKERS=5` and `CRAWL_THREADS=10`, restart it with `docker compose up -d` and enjoy!
+Armed with your empirical results, open up your `.env` file and set `CRAWLER_WORKERS` and `CRAWL_THREADS` to your chosen values. For example, for `5x10`, set `CRAWLER_WORKERS=5` and `CRAWL_THREADS=10`. Restart the crawler with `docker compose up -d` and enjoy!
 
 ## Wait, What? Why is 5x100 Slower Than 5x10?
 
-"Wait!" you might say. "Why would 5x10 be slower than 5x100?" The answer is "it's complicated." While you may have 50 vs. 500 threads (things running on your PC trying to fetch websites), it's possible that:
+"Wait!" you might say. "Why would 5x100 be slower than 5x10?" The answer is "it's complicated." While you may have 500 vs. 50 threads (things running on your PC trying to fetch pages), it's possible that:
 
-- Your computer runs out of network resources with `5x100` so those same 500 threads are fighting each other; whereas `5x10` might not have that same contention.
+- Your computer runs out of network resources with `5x100`, so those 500 threads are fighting each other, whereas `5x10` might not have the same contention.
 - The bottleneck on your PC might not be "how fast can I access websites?" but "how fast can I process data?"
-- You might have been downloading a lot of data while the 5x100 config was running (one of the reasons why we suggest running the benchmarks overnight)
-- Running out of memory, CPU availability, network bandiwdth, or other shared resource on your PC
-- A number of other things I can't fathom right now
+- You might have been downloading a lot of data while the `5x100` configuration was running (one of the reasons we suggest running the benchmarks overnight).
+- Your PC might run short of memory, CPU capacity, network bandwidth, or another shared resource.
+- Any number of other things I can't fathom right now might be at play.
 
-This is why the benchmarker uses an *emperical* methodology: it gives you the actual, real, tested results.
+This is why the benchmarker uses an *empirical* methodology: it gives you actual, tested results.
 
 ## Conclusion
 
-Mwmbl's crawler exposes a couple of nerd knobs and an emperical, systematic process for optimizing how many sites it can crawl/index at once. Using the data, you can decide how far you want to take the crawler, and how much bandwidth you want to use.
+Mwmbl's crawler exposes a couple of nerd knobs, and the benchmarker gives you an empirical, systematic way to optimize its crawling performance. Using the data, you can decide how far you want to take the crawler and how much bandwidth you want to use.
 
 If you have any questions, concerns, or comments, hit us up in our Matrix server (Crawling channel).
